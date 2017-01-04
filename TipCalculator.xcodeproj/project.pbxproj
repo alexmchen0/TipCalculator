@@ -416,7 +416,7 @@
 				DEVELOPMENT_TEAM = 6J8XEY338X;
 				INFOPLIST_FILE = TipCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = codepath.TipCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = test.codepath.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -429,7 +429,7 @@
 				DEVELOPMENT_TEAM = 6J8XEY338X;
 				INFOPLIST_FILE = TipCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = codepath.TipCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = test.codepath.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
