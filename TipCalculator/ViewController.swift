@@ -21,7 +21,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let defaults = UserDefaults.standard
+        defaults.register(defaults: ["tipPercentage": 20, "numPeople": 1])
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        billField.becomeFirstResponder()
+        let defaults = UserDefaults.standard
+        let tipPercentage = defaults.integer(forKey: "tipPercentage")
+        let numPeople = defaults.integer(forKey: "numPeople")
+        tipSlider.value = Float(tipPercentage)
+        percentLabel.text = String("\(tipPercentage)%")
+        peopleStepper.value = Double(numPeople)
+        peopleLabel.text = String(numPeople)
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,6 +67,7 @@ class ViewController: UIViewController {
         costPerPersonLabel.text = String(format: "$%.2f", costPerPerson)
     }
     
+    // Sets the number of people label when the stepper is changed
     @IBAction func onStepperChanged(_ sender: UIStepper) {
         peopleLabel.text = String(Int(sender.value))
     }
